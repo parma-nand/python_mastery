@@ -37,7 +37,19 @@ print(a)
 b=(1,2,3)   
 print(b)
 
-t=([1],3)
+t=([1],3) # inside tuple,list is mutable
 print(t)
 t[0].append(6)
 print(t)
+
+from collections import defaultdict
+
+sentence = "apple banana apple orange banana apple"
+words = sentence.split()
+
+freq = defaultdict(int)
+
+for w in words:
+    freq[w] += 1
+
+print(freq)
